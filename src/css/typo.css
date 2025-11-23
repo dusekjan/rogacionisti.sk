@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Franklin Gothic Condensed';
+    src: url('/fonts/franklin-gothic-condensed.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Franklin Gothic';
+    src: url('/fonts/franklin-gothic-italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Franklin Gothic';
+    src: url('/fonts/franklin-gothic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fg {
+    font-family: 'Franklin Gothic', Arial;
+}
+
+.fgc {
+    font-family: 'Franklin Gothic Condensed', Arial;
+}
+
+.fgi {
+    font-family: 'Franklin Gothic', Arial;
+    font-style: italic;
+}

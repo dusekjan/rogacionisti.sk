@@ -1,0 +1,31 @@
+@import "typo.css";
+
+@import "bible-grid.css";
+
+:root {
+    /* COLORS */
+    --color-fg: #101111;
+    --color-bg: #ffffff;
+
+    --color-yellow: #fec600;
+    --color-red: #dc4900;
+    --color-red-dark: #900;
+
+    --color-grey-light: #bebebf;
+    --color-grey: #939393;
+    --color-grey-dark: #1f1b20;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+main {
+    border: 1px solid var(--color-fg);
+    container: main-container / inline-size;
+}
