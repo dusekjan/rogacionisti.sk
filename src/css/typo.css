@@ -5,29 +5,48 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Franklin Gothic';
-    src: url('/fonts/franklin-gothic-italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
 }
 
-@font-face {
-    font-family: 'Franklin Gothic';
-    src: url('/fonts/franklin-gothic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+h1, h2, h3, h4 {
+    margin-top: 0;
 }
 
-.fg {
-    font-family: 'Franklin Gothic', Arial;
+h1 {
+    font-size: 42px;
 }
 
-.fgc {
-    font-family: 'Franklin Gothic Condensed', Arial;
+h2 {
+    font-size: 32px;
 }
 
-.fgi {
-    font-family: 'Franklin Gothic', Arial;
-    font-style: italic;
+h3 {
+    font-size: 20px;
+    text-decoration: underline;
+    text-decoration-color: var(--color-yellow);
+    text-underline-offset: 6px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+.red-dark-bg {
+    background: var(--color-red-dark);
+    color: white;
+    padding: 6px;
+}
+
+.red-bg {
+    background: var(--color-red);
+    color: white;
+    padding: 6px;
+}
+
+.yellow-bg {
+    background: var(--color-yellow);
+    color: white;
+    padding: 6px;
 }

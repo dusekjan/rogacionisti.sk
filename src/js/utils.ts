@@ -1,4 +1,4 @@
-
-export default function greet(name: string): string {
-    return `Hello, ${name}!`;
+export function updateYear() {
+    const year = document.querySelector("#year")!;
+    year.textContent = new Date().getFullYear().toString();
 }

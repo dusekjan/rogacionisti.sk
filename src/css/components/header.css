@@ -1,0 +1,66 @@
+header {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 100;
+
+    height: var(--header-height);
+
+    background: rgba(255, 255, 255, 0.90);
+
+    --backdrop-filter-header: blur(6px);
+    backdrop-filter: var(--backdrop-filter-header);
+
+    border-bottom: 1px solid var(--color-yellow);
+
+    & .content {
+        position: relative;
+        justify-content: center;
+
+        padding: 0 8px;
+    }
+
+    & .logo {
+        position: absolute;
+        top: 0;
+        left: 96px;
+        height: 100%;
+        padding: 8px 0;
+
+        & img {
+            height: 100%;
+            transition: filter 300ms;
+        }
+
+        &:hover img {
+            filter: drop-shadow(0 0 1px var(--color-yellow));
+        }
+    }
+
+    & ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+
+        & a {
+            height: var(--header-height);
+            position: relative;
+
+            color: var(--color-fg);
+            padding: 16px 8px;
+
+            text-decoration: underline transparent solid 2px;
+            text-underline-offset: 16px;
+
+            transition: bottom 200ms, text-decoration-color 300ms, text-underline-offset 300ms;
+            bottom: 0;
+
+            &:hover {
+                bottom: 3px;
+                text-decoration-color: var(--color-yellow);
+                text-underline-offset: 6px;
+            }
+        }
+    }
+}
+
+
