@@ -4,10 +4,21 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rogacionisti</title>
+    <title>Kongregácia rogacionistov Srdca Ježišovho - RCJ</title>
 
     <link rel="stylesheet" href="/src/css/app.css" />
     <script src="/src/js/app.js" type="module"></script>
+
+    <!-- TODO
+    predelat odkazy do bible na odkazy do bible - youversion a pridat jim nbsp
+    ERA, RCJ - pridat patricny abbr
+    prejmenovat odkazy a kontakty
+    facebook do navigace
+
+    RESPO:
+    v historii zestihlit bordery, timeline a prenastavit ze 40% na 20% a adekvatni padding
+    -->
+
 </head>
 <body>
     <header>
@@ -17,15 +28,17 @@
             </a>
             <nav>
                 <ul>
-                    <li><a href="#onas">Kto sme</a></li>
-                    <li><a href="#mise">Pôsobenie</a></li>
-                    <li><a href="#era">ERA</a></li>
-                    <li><a href="#anibal">Zakladateľ</a></li>
-                    <li><a href="#historie">História</a></li>
-                    <li><a href="#odkazy">Odkazy</a></li>
-                    <li><a href="#kontakt">Kontakt</a></li>
+                    <li><a href="#ktosme">Kto sme</a></li>
+                    <li><a href="#posobenie">Pôsobenie</a></li>
+                    <li><a href="#era">ERA & Famiglia</a></li>
+                    <li><a href="#zakladatel">Zakladateľ</a></li>
+                    <li><a href="#historia">História</a></li>
+                    <li><a href="#kontakt">Kontakty & Odkazy</a></li>
                 </ul>
             </nav>
+            <a class="facebook" href="https://www.facebook.com/profile.php?id=61586983414348" target="_blank" aria-label="Rogacionisti na Facebooku" title="Rogacionisti na Facebooku">
+                <img src="/icons/facebook.svg" alt="Facebook logo" aria-hidden="true">
+            </a>
         </div>
     </header>
 
@@ -37,9 +50,9 @@
                     <span>Šíriť modlitbu</span><br>
                     <span>Byť dobrým robotníkom</span></h1>
                     <p>Modlitba, služba a povolanie. Krátky úvodný text ako placeholder obsahu, ktorý stručne naznačí poslanie.</p>
-                    <a href="#onas" class="btn">Viac o nás &#10095;</a>
+                    <a href="#ktosme" class="btn">Viac o nás &#10095;</a>
                 </div>
-                <img src="logo-vertical-sk.png" alt="Logo Rogacionisti.sk vertikální" />
+                <img src="logo-text.png" alt="Logo Rogacionisti.sk vertikální" />
             </div>
         </section>
 
@@ -47,150 +60,207 @@
             <img src="/logo-black.png" alt="Pozadí" class="background-image" />
         </div>
 
-        <section id="onas">
+        <section id="ktosme">
             <div class="content">
                 <article>
                     <h2>Kto sme</h2>
-                    <p>Na konci 19. storočia sa v jednej nechvalne známej štvrti mesta Messina, zvanej Avignone, zrodila kongregácia otcov Rogacionistov Srdca Ježišovho (RCJ). Bola založená s úmyslom pomáhať v začatom diele svojho zakladateľa, ktorý pochádzal a tiež prežil takmer celý svoj život v tomto meste východnej Sicílie.</p>
-                    <p class="quote"><span class="yellow-bg">Pošli, Pane, svätých apoštolov do svojej cirkvi.</span></p>
-                    <p>Jeho meno je svätý Annibal Maria di Francia. (V prípade záujmu vám zašleme zdarma krátky životopis tohto svätca.) Pozrime sa teraz spoločne na to, v čom mu mali títo budúci rehoľníci a kňazi pomáhať.</p>
-                </article>
-            </div>
-        </section>
-
-        <section id="era">
-            <div class="content">
-                <article>
-                    <h2>ERA</h2>
-                    <p><abbr title="Európska rogacionistická organizácia">ERA</abbr> je laické hnutie inšpirované charizmou sv. Annibala Maria di Francia, ktoré združuje laikov a kňazov v Európe. Hlavným cieľom ERA je podpora modlitby za povolania, vzdelávanie a realizácia sociálnych projektov v duchu rogacionistického poslania.</p>
-                    <p>ERA organizuje stretnutia, duchovné obnovy a vzdelávacie akcie, ktoré pomáhajú členom rásť vo viere a angažovanosti v cirkvi a spoločnosti. Prostredníctvom týchto aktivít sa snaží šíriť posolstvo sv. Annibala o dôležitosti modlitby za povolania a službe potrebným.</p>
-                    <a href="https://eracz.cz" class="btn" target="_blank">Navštíviť web ERA &#10095;</a>
-                </article>
-            </div>
-        </section>
-
-        <section id="mise">
-            <div class="content">
-                <h2>Pôsobenie & Aktivity</h2>
-                <div>
-                    <ul class="activities">
-                        <li>
-                            <img src="/icons/bible.svg">
-                            <h4><span class="red-dark-bg">Modlitba</span></h4>
-                            <p>Denná prosba za povolania – jadro charizmy.</p>
+                    <p>Povolanie a misia Rogacionistov Srdca Ježišovho (<abbr title="Rogacionisti Srdca Ježišovho">RCJ</abbr>) vychádza z ľudskej, duchovnej a apoštolskej skúsenosti, ktorú svätý Hanibal Maria Di Francia (1851–1927) pod vedením Ducha Svätého prežil medzi deťmi a chudobnými v štvrti Avignone v Messine (Sicília). Otec Hanibal chcel, aby už názov kongregácie, ktorú zakladal, vyjadrovalo jej podstatu a jej misiu. Prečo teda Rogacionisti?</p>
+                    <p>Meno Rogacionisti je zložené z dvoch latinských slov:</p>
+                    <ol>
+                        <li>Prvým latinským slovom je „Rogate“, ktorú v slovenčine znamená „proste“. Sv. Hanibal sa týmto slovom odvoláva na evanjeliový úsek z Mt 9,37-38 a Lk 10,2, kde Ježiš hovorí svojim učeníkom:
+                            <p class="quote"><span class="yellow-bg">„Žatva je veľká, ale robotníkov málo. Proste [Rogate] preto Pána žatvy, aby poslal robotníkov na svoju žatvu.“</span></p>
                         </li>
-                        <li>
-                            <img src="/icons/cross-faith.svg">
-                            <h4><span class="red-dark-bg">Formácia</span></h4>
-                            <p>Sprevádzanie mladých v rozlišovaní životnej cesty.</p>
-                        </li>
-                        <li>
-                            <img src="/icons/fish.svg">
-                            <h4><span class="red-dark-bg">Služba</span></h4>
-                            <p>Praktická pomoc núdznym a sociálne projekty.</p>
-                        </li>
-                        <li>
-                            <img src="/icons/church.svg">
-                            <h4><span class="red-dark-bg">Spoločenstvo</span></h4>
-                            <p>Budovanie vzťahov založených na viere a nádeji.</p>
-                        </li>
-                    </ul>
-                    <img src="/world.png" alt="Mapa světa s vyznačenými místy působení rogacionistů" />
-                </div>
-            </div>
-        </section>
-
-        <section id="anibal">
-            <div class="content">
-                <img alt="Svatý Annibal Maria di Francia" src="/hannibal.jpg" />
-                <article>
-                    <h2>Zakladateľ</h2>
-                    <h3>Svätý Annibal Maria di Francia</h3>
-
-                    <p>Annibalov život bol už od útleho detstva poznačený túžbou nájsť účinný spôsob na záchranu všetkých duší. V hlbokej modlitbe, ktorá charakterizovala jeho duchovný život, sa mu to nakoniec podarilo nájsť. „Treba sa modliť, aby na svete bolo veľa svätých ľudí, ochotných pracovať pre nebeské kráľovstvo.“ Keď našiel potvrdenie tejto svojej intuície v Pánových slovách:</p>
-                    <p class="quote"><span class="red-bg">Žatva je veľká, robotníkov málo. Proste preto Pána žatvy, nech vyšle robotníkov na svoju žatvu! (Mt 9, 37; Lk 10, 2)</span></p>
-                    <p>Keď bol mladý Annibal ešte diakonom, stretol sa raz so žobrákom z avignonskej štvrte. Toto stretnutie môžeme bez nadsádzky nazvať osudovým, pretože od tejto chvíle Annibal vedel, po ktorej životnej ceste sa má vydať. Rozhodol sa venovať svoj život záchrane stratených duší v tejto zakázanej štvrti; všetkým dušiam, ale hlavne tým najnevinnejším, ktorí sa ocitli v tejto situácii bez vlastného pričinenia. Potom, čo bol vysvätený za kňaza, sa nasťahoval do Avignonu a začal svoje charitatívne dielo materiálnej, ale predovšetkým duchovnej obnovy a pomoci.</p>
-
+                        <li>Druhým latinským slovom je „actio“, čo znamená činnosť. Pod činnosťou treba rozumieť hlavne evanjelizáciu, ľudský rozvoj a charitatívnu činnosť, zameranú na službu lásky k opusteným, k sirotám a k chudobným.</li>
+                    </ol>
                     <details>
-                        <summary>Viac o sv. Annibalovi</summary>
+                        <summary>Viac o názve a poslaní</summary>
                         <div>
-                            <p>Práve tieto dva dôležité okamihy v živote otca Annibala sa stali ústrednými bodmi duchovného aj apoštolského života kongregácie otcov Rogacionistov. Každodennou modlitbou za povolania a starostlivosťou o deti v núdzi napĺňajú poslanie, ktoré im pri ich zrode vložil do vienka Nebeský Otec prostredníctvom života otca Annibala.</p>
-                            <p>Otcovia Rogacionisti nepôsobili iba na Sicílii, ale postupom času, keď sa výzva k modlitbe za povolania stávala stále a stále naliehavejšou, vykročili do širého sveta, aby tak mohli ohlasovať toto Pánovo slovo. V súčasnosti pôsobia, rovnako ako ich duchovné sestry Dcér Božej Horlivosti, majúceho toho istého zakladateľa, svätého Annibala, na štyroch svetových kontinentoch. Rogacionistické farnosti, školy a inštitúty sa nachádzajú v Taliansku, Španielsku, Poľsku, Rwande, Zaire, Indii, na Filipínach, USA, Brazílii a v Argentíne.</p>
-                            <p>Keď otec Annibal odkazoval svojim „deťom“ a všetkým nasledujúcim generáciám svoje charizma, tak ju zhrnul do troch základných bodov:</p>
+                            <p>A prečo sme Rogacionisti Srdca Ježišovho? Evanjelista Matúš hovorí, že Ježišov príkaz učeníkom, aby prosili o nových robotníkov na Pánovu žatvu, je predchádzaný Ježišovým súcitom k zástupom: „Keď videl zástupy, bolo mu ich ľúto, lebo boli unavené a bezradné ako ovce bez pastiera.“ (Mt 9,36). Preto sa majú Rogacionisti snažiť o to, aby vstúpili do Ježišovho Srdca a cítili ten istý súcit, aký cítil on. Súcit, kvôli ktorému hovorí: „Proste preto Pána žatvy, aby poslal robotníkov na svoju žatvu.“</p>
+                            <p>Preto sa dá povedať, že duchovná a apoštolská identita našej Kongregácie sa podľa príkladu a učenia nášho zakladateľa - sv. Hanibala - realizuje v trojakej misii:</p>
                             <ol>
-                                <li>Modlite sa za dobrých robotníkov na Pánovej žatve, pretože to je jediný zaručený spôsob, ako zachrániť všetky duše – z toho dôvodu sa ako otcovia, tak aj ostatné laické hnutia, vrátane ERA, veľmi často modlia strelnú modlitbu: „Pošli, Pane, svätých apoštolov do svojej cirkvi.“</li>
-                                <li>Rozširujte túto modlitbu, aby jej sila prenikla až do najvzdialenejších kútov Zeme.</li>
-                                <li>Predtým, než o niečo budete prosiť, snažte sa byť toho hodní. Ak chcete prosiť za dobrých robotníkov na Pánovej vinici, musíte sa najprv vy sami pokúsiť o to, aby ste sa nimi sami stali.</li>
+                                <li>každodenne sa modliť za získanie dobrých robotníkov pre Božie kráľovstvo;</li>
+                                <li>šíriť všade tento duch modlitby;</li>
+                                <li>byť dobrými robotníkmi v Cirkvi, angažovať sa v dielach milosrdenstva a lásky, vo výchove a posväcovaní detí a mládeže, najmä chudobných a opustených, v evanjelizácii, ľudskom rozvoji a pomoci chudobným.</li>
                             </ol>
+                            <p class="quote"><span class="red-bg">Buďte Božími odborníkmi. (...) To znamená, buďte odborníkmi v umení modlitby a lásky: so zloženými rukami pred Bohom a s rukami natiahnutými k bratom. Zložené ruky a natiahnuté ruky: tak sa stávate Božími odborníkmi! To je vaše poslanie.</span></p>
+                            <p>(Z príhovoru svätého otca Františka Rogacionistom Srdca Ježišovho a Dcéram Božej horlivosti, 18.9.2023)</p>
                         </div>
                     </details>
                 </article>
             </div>
         </section>
 
-        <section id="historie">
+        <section id="posobenie">
             <div class="content">
-                <h2>História - BUDU ZEŠTÍHLOVAT JEŠTĚ A POTŘEBUJI DŮLEŽITÉ MILNÍKY</h2>
-                <ol class="timeline">
-                    <div class="timeline-hr"></div>
-                    <div class="circles-hr">
-                        <div class="circle-hr"></div>
-                        <div class="circle-hr"></div>
-                        <div class="circle-hr"></div>
-                        <div class="circle-hr"></div>
-                        <div class="circle-hr"></div>
-                        <div class="circle-hr"></div>
-                        <div class="circle-hr"></div>
-                        <div class="circle-hr"></div>
-                        <div class="circle-hr"></div>
-                    </div>
+                <h2>Pôsobenie</h2>
+                <div>
+                    <ul class="activities">
+                        <li>
+                            <img src="/icons/prayer.svg">
+                            <h4><span class="red-dark-bg">Modlitba</span></h4>
+                            <p>Každodenne sa modliť za získanie dobrých robotníkov pre Božie kráľovstvo.</p>
+                        </li>
+                        <li>
+                            <img src="/icons/bible.svg">
+                            <h4><span class="red-dark-bg">Formácia</span></h4>
+                            <p>Šíriť všade tento duch modlitby.</p>
+                        </li>
+                        <li>
+                            <img src="/icons/heart.svg">
+                            <h4><span class="red-dark-bg">Služba</span></h4>
+                            <p>Byť dobrými robotníkmi v Cirkvi, angažovať sa v dielach milosrdenstva a lásky, vo výchove a posväcovaní detí a mládeže, najmä chudobných a opustených, v evanjelizácii, ľudskom rozvoji a pomoci chudobným.</p>
+                        </li>
+                        <!-- <li>
+                            <img src="/icons/church.svg">
+                            <h4><span class="red-dark-bg">Spoločenstvo</span></h4>
+                            <p>Budovanie vzťahov založených na viere a nádeji.</p>
+                        </li> -->
+                    </ul>
+                    <img class="zoomable" src="/map.png" alt="Mapa světa s vyznačenými místy působení rogacionistů." />
+                </div>
+            </div>
+        </section>
 
+        <section id="era">
+            <div class="content">
+                <article>
+                    <h2>ERA - TEXT je třeba dodat</h2>
+                    <p><abbr title="Európska rogacionistická organizácia">ERA</abbr> je laické hnutie inšpirované charizmou sv. Annibala Maria di Francia, ktoré združuje laikov a kňazov v Európe. Hlavným cieľom <abbr title="Európska rogacionistická organizácia">ERA</abbr> je podpora modlitby za povolania, vzdelávanie a realizácia sociálnych projektov v duchu rogacionistického poslania.</p>
+                    <p><abbr title="Európska rogacionistická organizácia">ERA</abbr> organizuje stretnutia, duchovné obnovy a vzdelávacie akcie, ktoré pomáhajú členom rásť vo viere a angažovanosti v cirkvi a spoločnosti. Prostredníctvom týchto aktivít sa snaží šíriť posolstvo sv. Annibala o dôležitosti modlitby za povolania a službe potrebným.</p>
+                    <a href="https://www.eracz.cz" class="btn" target="_blank">Navštíviť web ERA &#10095;</a>
+                    <address style="margin-top: 1em;">
+                        ERA Česká republika<br>
+                        <a href="mailto:info@eracz.cz">info@eracz.cz</a><br>
+                    </address>
+
+                    <h2>Famiglia del Rogate - TEXT je třeba dodat</h2>
+                    <p><abbr title="Rodina Rogate">Famiglia del Rogate</abbr> je duchovná rodina, ktorá spája všetkých, čo žijú a šíria charizmu sv. Hanibala Maria Di Francia. Patria do nej rehoľné kongregácie Rogacionistov Srdca Ježišovho (RCJ) a Dcér Božej horlivosti (FDZ), spolu s laickými hnutiami, dobrovoľníkmi a priateľmi diela, ktorí sa zapájajú do modlitby za povolania a do služby chudobným a opusteným.</p>
+                    <p>Cieľom Rodiny Rogate je prežívať spoločné poslanie „Rogate“ – neustále prosiť Pána žatvy o dobrých robotníkov – a premieňať ho na konkrétne skutky evanjelizácie, výchovy a solidarity. Členovia sa stretávajú na spoločných modlitbách, formačných podujatiach a apoštolských iniciatívach po celom svete.</p>
+                    <address>
+                        Famiglia del Rogate<br>
+                        <a href="mailto:famiglia@rogacionisti.sk">famiglia@rogacionisti.sk</a>
+                    </address>
+                </article>
+            </div>
+        </section>
+
+        <section id="zakladatel">
+            <div class="content">
+                <img class="zoomable" alt="Sv. Hanibal Maria Di Francia" src="/hannibal.jpg" />
+                <article>
+                    <h2>Zakladateľ</h2>
+                    <h3>Sv. Hanibal Maria Di Francia <i>(1851-1927)</i></h3>
+
+                    <p>Otec Hanibal sa narodil 5. júla 1851 v Messine (Taliansko) ako syn šľachtičnej Anny Toscano a rytiera Francesca, markíza zo Santa Caterina dello Ionio, vicekonzula Svätej stolice a čestného kapitána námorníctva. Bol tretí zo štyroch detí. Po predčasnej smrti svojho otca sa stal polosirotou, keď mal len 15 mesiacov. Táto trpká skúsenosť v ňom vzbudila osobitnú nežnosť a lásku k sirotám, čo charakterizovalo jeho život a výchovný systém.</p>
+
+                    <p>Vypestoval si veľkú lásku k Eucharistii, získal povolenie (výnimočné na tú dobu), pristupovať každý deň k svätému prijímaniu. Ako veľmi mladý, počas adorácie pred Sviatosťou oltárnou, zažil, čo možno nazvať <i>„vnuknutím modlitby Rogate”</i>: objavil potrebu modlitby za povolania, čo neskôr našiel vyjadrené vo verši z evanjelia: <i>„Žatva je veľká, ale robotníkov je málo. Proste [Rogate] preto Pána žatvy, aby poslal robotníkov na svoju žatvu“</i> (Mt 9,38; Lk 10,2). Tieto slová z evanjelia boli základnou intuíciou, ktorej venoval celý svoj život.</p>
+
+                    <p class="recap"><span>Lit. spomienka: 1. jún</span><span>Blahoslavený: 7. október 1990</span><span>Svätý: 16. máj 2004</span></p>
+                    <p>Bol nadaný a mal výnimočné literárne schopnosti. Akonáhle pocítil Božie volanie, veľkodušne naň odpovedal a svoje talenty využil vo svojej službe. Po ukončení štúdia bol 16. marca 1878 vysvätený za kňaza. Niekoľko mesiacov predtým ho <i>„prozreteľné“</i> stretnutie s takmer slepým žobrákom priviedlo do kontaktu so smutnou sociálnou a morálnou realitou najchudobnejšej periférnej štvrte Messiny, tzv. avignonské domy, a otvorilo mu cestu k bezhraničnej láske k chudobným a sirotám, ktorá sa stala základnou črtou jeho života.</p>
+                    <p>So súhlasom svojho biskupa sa presťahoval do tohto <i>„geta“</i> a venoval všetky svoje sily vykúpeniu týchto nešťastných ľudí, ktorí sa v jeho očiach javili, podľa evanjeliového obrazu ako <i>„ovce bez pastiera“</i>. Bola to skúsenosť silne poznačená nepochopením, ťažkosťami a nepriateľstvom všetkého druhu, ktoré prekonal s veľkou vierou, keď v ponížených a vylúčených videl samotného Ježiša Krista napĺňajúc to, čo nazýval:</p>
+                    <p class="quote"><span class="red-bg">„Duch dvojitej lásky: evanjelizácia a pomoc chudobným“</span></p>
+
+                    <details>
+                        <summary>Viac o živote sv. Hanibala</summary>
+                        <div>
+                            <p>V roku 1882 založil sirotince, ktoré boli nazvané <i>„antoniánske“</i>, pretože boli pod ochranou sv. Antona z Padovy. Jeho záujmom bolo nielen poskytovať chlieb a prácu, ale predovšetkým celkové morálne a náboženské vzdelanie, pričom svojim zvereným poskytoval skutočnú rodinnú atmosféru, ktorá podporovala proces formovania, aby mohli objaviť a nasledovať Boží plán.</p>
+                            <p>V misijnom duchu túžil pomáhať sirotám a chudobným celého sveta. Ale ako to urobiť? Slovo Rogate mu otvorilo túto možnosť. Preto napísal: <i>„Čo je týchto pár sirôt, ktoré sa zachránia, a tých pár chudobných, ktorí sa evanjelizujú, v porovnaní s miliónmi, ktoré sa strácajú a sú opustené ako stádo bez pastiera? ... Hľadal som východisko a našiel som ho rozsiahle, ohromné v týchto krásnych slovách nášho Pána Ježiša Krista: Rogate ergo ... Vtedy sa mi zdalo, že som našiel tajomstvo všetkých dobrých skutkov a spásy všetkých duší.“</i></p>
+                            <p>Hanibal pochopil, že <i>„Rogate“</i> nebolo len jednoduchým odporúčaním Pána, ale výslovným príkazom a <i>„neomylným liekom“</i>. Z tohto dôvodu je táto charizma považovaná za hnací princíp pri prozreteľnom vzniku novej kongregácie v Cirkvi. Ďalším dôležitým aspektom, ktorý treba zdôrazniť, je to, že predbehol svoju dobu, keď považoval za povolania aj povolania angažovaných laikov: rodičov, učiteľov a až po dobrých predstaviteľov vlád.</p>
+                            <p>Aby realizoval svoje apoštolské ideály v Cirkvi a vo svete, založil dve nové rehoľné rodiny: v roku 1887 Kongregáciu Dcér Božej horlivosti (FDZ) a o desať rokov neskôr Kongregáciu Rogacionistov Srdca Ježišovho (RCJ). Zvolil, aby sa členovia oboch inštitútov, kanonicky schválených 6. augusta 1926, zaviazali žiť podľa Ježišovho príkazu <i>„Rogate“</i> prostredníctvom štvrtého sľubu.</p>
+                            <p>Tak napísal otec Hanibal v prosbe z roku 1909 adresovanej svätému Piovi X.: <i>„Od svojej mladosti som sa venoval svätému slovu evanjelia: Rogate ergo [Proste preto].. V mojich skromných charitatívnych inštitútoch sa každý deň vznáša nepretržitá modlitba sirôt, chudobných, kňazov a zasvätených panien, ktorou prosia Najsvätejšie Srdcia Ježiša a Márie, svätého patriarchu Jozefa a svätých apoštolov, aby hojne obdarili Svätú Cirkev vyvolenými a svätými kňazmi, evanjeliovými robotníkmi na mystickej žatve duší.“</i> Na šírenie modlitby za povolania podporoval početné iniciatívy: udržiaval korešpondenčné a osobné kontakty s pápežmi svojej doby; založil Svätú alianciu pre klérus a Spoločenstvo evanjeliovej modlitby za povolania pre všetkých veriacich. Založil časopis s výstižným názvom <i>„Boh a blížny“</i>, aby zapojil veriacich do života podľa tých istých ideálov.</p>
+                            <p><i>„Celá Cirkev,“</i> napísal, <i>„sa musí oficiálne modliť za tento účel, pretože misia modlitby za získanie dobrých robotníkov je taká, že by mala živým spôsobom zaujímať každého veriaceho, každého kresťana, ktorému leží na srdci dobro všetkých duší, ale osobitne biskupov, pastierov mystického stáda, ktorým sú zverené duše a ktorí sú živými apoštolmi Ježiša Krista.“</i> Každoročný Svetový deň modlitby za povolania, ktorý zaviedol Pavol VI. v roku 1964, možno považovať za odpoveď Cirkvi na túto jeho intuíciu.</p>
+                            <p>Mal veľkú lásku ku kňazstvu a bol presvedčený, že len prostredníctvom práce mnohých svätých kňazov je možné zachrániť ľudstvo. Intenzívne sa angažoval v duchovnej formácii seminaristov, ktorých mu zveril arcibiskup z Messiny. Často opakoval, že bez pevnej duchovnej formácie, bez modlitby, <i>„všetko úsilie biskupov a rektorov seminárov sa vo výsledku zredukuje na umelú výchovu kňazov...“</i>. On sám bol prvým dobrým robotníkom evanjelia a kňazom podľa Božieho srdca. Jeho láska, definovaná ako <i>„bez výpočtov a bez hraníc“</i>, sa prejavovala osobitným spôsobom aj voči kňazom v ťažkostiach a rehoľníčkam.</p>
+                            <p>Už počas svojho pozemského života bol sprevádzaný povesťou svätosti, ktorá sa rozšírila na všetkých úrovniach, takže keď 1. júna 1927 zomrel v Messine, utešený prítomnosťou Najsvätejšej Panny Márie, ktorú počas svojho pozemského života tak veľmi miloval, ľudia hovorili: <i>„Poďme sa pozrieť na spiaceho svätca“</i>.</p>
+                            <p>Pohreb bol skutočnou apoteózou, ktorú vtedajšie noviny podrobne zaznamenali článkami a fotografiami. Úrady mu ochotne udelili povolenie na pochovanie v chráme - Tempio della Rogazione Evangelica, ktorý si sám želal a ktorý je venovaný práve <i>„božiemu príkazu“</i>: <i>„Proste Pána žatvy, aby poslal robotníkov na svoju žatvu“</i>.</p>
+                            <p>Svätosť a poslanie otca Hanibala, nazvaného <i>„znamenitým apoštolom modlitby za povolania“</i>, dnes hlboko prežívajú všetci, ktorí sú presvedčení o potrebe povolaní v Cirkvi.</p>
+                            <p>Pápež Ján Pavol II. 7. októbra 1990 vyhlásil Hanibala za blahoslaveného a na druhý deň ho označil za <i>„skutočného predchodcu a horlivého učiteľa modernej pastorácie povolaní”</i>. Hanibal Mária Di Francia bol svätorečený Jánom Pavlom II. 16. mája 2004.</p>
+                            <p>Homília Jána Pavla II pri kanonizácii: <i>„Kto ma miluje, bude zachovávať moje slovo“</i> (Jn 14,23). V týchto evanjeliových slovách vidíme duchovný profil Hanibala Máriu Di Franciu, ktorého láska k Pánovi podnietila, aby celý svoj život zasvätil duchovnému dobru svojich blížnych. V tejto perspektíve cítil predovšetkým naliehavú potrebu naplniť evanjeliové prikázanie: <i>„Rogate ergo... – Proste teda Pána žatvy, aby poslal robotníkov na svoju žatvu!“</i> (Mt 9,38).</p>
+                            <p>Otcom rogacionistom a sestrám Dcér Božej horlivosti zanechal úlohu, aby sa zo všetkých síl snažili, aby modlitba za povolania bola <i>„neustála a celosvetová“</i>. Túto výzvu adresuje otec Hanibal Mária Di Francia aj mladým ľuďom našej doby, syntetizujúc ju vo svojej obvyklej výzve: <i>„Zamilujte sa do Ježiša Krista“</i>.</p>
+                            <p>Z tejto prozreteľnej intuície vzniklo v Cirkvi veľké hnutie modlitby za povolania. Zo srdca prajem, aby príklad otca Hanibala Márie Di Franciu viedol a podporoval aj v našej dobe túto pastoračnú</p>
+                        </div>
+                    </details>
+                </article>
+            </div>
+        </section>
+
+        <section id="historia">
+            <div class="content">
+                <h2>História</h2>
+                <ol class="timeline">
+                    <div class="timeline-vertical"></div>
                     <li>
-                        <time datetime="1878">1878</time>
-                        <h4>Začiatok služby v Messine</h4>
-                        <p>Annibal Maria di Francia sa stretáva s chudobnými v Messine, začína jeho služba.</p>
+                        <time datetime="1851">1851</time>
+                        <h4>Narodenie a krst</h4>
+                        <p>Hanibal sa narodil 5. júla a bol pokrstený 7. júla v kostole sv. Vavrinca v Messine (Sicília).</p>
+                        <div class="circle"></div>
                     </li>
                     <li>
-                        <time datetime="1882">1882</time>
-                        <h4>Prvá komunita</h4>
-                        <p>Zakladá prvú komunitu na pomoc deťom v núdzi vo štvrti Avignone.</p>
+                        <time datetime="1868">1868</time>
+                        <h4>Duchovné vnuknutie modlitby za povolania (Rogate)</h4>
+                        <p>Vo svojich 17 rokoch, počas adorácie, mladý Hanibal dostáva duchovné vnuknutie o potrebe modliť sa za robotníkov pre Pánovu žatvu (Mt 9,38; Lk 10,2). Táto udalosť určuje jeho budúce poslanie.</p>
+                        <div class="circle"></div>
+                    </li>
+                    <li>
+                        <time datetime="1878">1878</time>
+                        <h4>Rozhodujúce stretnutie</h4>
+                        <p>Niekoľko mesiacov pred kňazskou vysviackou, Hanibal stretáva jedného slepého žobráka, ktorý ho privedie do najhoršej štvrte mesta Messina: Quartiere Avignone. Hanibal sa po tomto stretnutí rozhodne, že zasvätí svoj život ľuďom z tejto štvrte.</p>
+                        <div class="circle"></div>
+                    </li>
+                    <li>
+                        <time datetime="1886">1886</time>
+                        <h4>1. júl: príchod Ježiša v eucharistii</h4>
+                        <p>Ježiš v Sviatosti oltárnej je slávnostne umiestnený do malej kaplnky v štvrti Avignone: táto udalosť značí duchovný začiatok celého jeho diela.</p>
+                        <div class="circle"></div>
+                    </li>
+                    <li>
+                        <time datetime="1887">1887</time>
+                        <h4>Kongregácia Dcér Božej horlivosti</h4>
+                        <p>19. marca Hanibal zakladá ženskú kongregáciu pod názvom Dcéry Božej horlivosti. Táto kongregácia je zasvätená výchove sirôt a modlitbe za povolania.</p>
+                        <div class="circle"></div>
                     </li>
                     <li>
                         <time datetime="1897">1897</time>
-                        <h4>Založenie kongregácie</h4>
-                        <p>Oficiálny vznik kongregácie Rogacionistov Srdca Ježišovho (<abbr title="Rogacionisti Srdca Ježišovho">RCJ</abbr>).</p>
+                        <h4>Kongregácia Rogacionistov Srdca Ježišovho (RCJ)</h4>
+                        <p>16. mája je Hanibalom založená mužská Kongregácia rogacionistov Srdca Ježišovho, zasvätená modlitbe za povolania a pomoci chudobným.</p>
+                        <div class="circle"></div>
                     </li>
                     <li>
                         <time datetime="1908">1908</time>
-                        <h4>Pomoc pri zemetrasení</h4>
-                        <p>Annibal pomáha obetiam zemetrasenia v Messine.</p>
+                        <h4>Zemetrasenie v Messine</h4>
+                        <p>Zemetrasenie, ktoré zničilo takmer celú Messinu, poznačilo históriu tohto mesta a aj histórie našej kongregácie. Pri tomto zemetrasení prišli o život 13 sestier z Dcér Božej horlivosti. Hanibal sa po zemetrasení stáva symbolom materiálnej a hlavne duchovnej obnovy mesta.</p>
+                        <div class="circle"></div>
                     </li>
                     <li>
                         <time datetime="1927">1927</time>
-                        <h4>Úmrtie zakladateľa</h4>
-                        <p>Smrť sv. Annibala Maria di Francia.</p>
-                    </li>
-                    <li>
-                        <time datetime="1950">1950</time>
-                        <h4>Rozšírenie do sveta</h4>
-                        <p>Rozšírenie pôsobenia Rogacionistov do ďalších krajín.</p>
-                    </li>
-                    <li>
-                        <time datetime="1989">1989</time>
-                        <h4>Založenie ERA</h4>
-                        <p>Založenie <abbr title="Európska rogacionistická organizácia">ERA</abbr>.</p>
-                    </li>
-                    <li>
-                        <time datetime="2004">2004</time>
-                        <h4>Kanonizácia</h4>
-                        <p>Kanonizácia Annibala Maria di Francia pápežom Jánom Pavlom II.</p>
-                    </li>
-                    <li>
-                        <time datetime="2020">2020</time>
-                        <h4>Súčasnosť</h4>
-                        <p>Rogacionisti pôsobia na 4 kontinentoch, venujú sa modlitbe za povolania a službe núdznym.</p>
+                        <h4>Hanibalova smrť</h4>
+                        <p>1. júna Hanibal Maria di Francia umiera.</p>
+                        <div class="circle"></div>
                     </li>
                 </ol>
+            </div>
+        </section>
+
+        <section id="kontakt">
+            <div class="content">
+                <h2>Kontakty (zatiaľ bez štýlov)</h2>
+                <address>
+                    Ulice a číslo<br>
+                    PSČ Mesto<br>
+                    Slovensko<br>
+                </address>
+
+                <p>Možná fotka domu?</p>
+
+                <a href="mailto:rogacionistipo@gmail.com">rogacionistipo@gmail.com</a>
+                <p style="text-align: center;"><a href="mailto:info@rogacionisti.sk">info@rogacionisti.sk</a> - možná by bylo lepší semka dát tuto adresu? A nastavili bychom přeposílání na váš Gmail, takže když by někdo napsal na info@rogacionisti.sk, tak byste to viděli ve vaší Gmail schránce. Přijde mi tato adresa reprezentativnější a myslím, že byste do budoucna mohli používat jenom tuto adresu. (až ji budeme mít založenou)</p>
+
+                <ul>
+                    <li>Rogacionisti FB - <a href="https://www.facebook.com/profile.php?id=61586983414348" target="_blank">facebook.com</a></li>
+                    <li>Rogacionisti vo svete - <a href="http://rcj.org" target="_blank">rcj.org</a></li>
+                    <li>Správy z Vatikánu - <a href="https://www.vaticannews.va/sk.html" target="_blank">vaticannews.va</a></li>
+                    <li>TK KBS - <a href="https://www.tkkbs.sk/" target="_blank">tkkbs.sk</a></li>
+                    <li>Katechizmus - <a href="https://katechizmus.sk/" target="_blank">katechizmus.sk</a></li>
+                </ul>
             </div>
         </section>
 
@@ -224,40 +294,33 @@
                 </div>
             </div>
         </section>
-
-        <section id="odkazy">
-            <div class="content">
-                Dôležité odkazy<br>
-                potrebuji dulozite odkazy
-            </div>
-        </section>
-
-        <section id="kontakt">
-            <div class="content">
-                <h2>Kontakt - NEDODĚLANÉ</h2>
-                <p>Máte otázku? Napíšte nám.</p>
-                <form class="contact-form" method="post">
-                        <label>
-                            Email
-                            <input name="email" type="email" required />
-                        </label>
-                        <label>
-                            Správa
-                            <textarea name="message" rows="5" required></textarea>
-                        </label>
-                        <button type="submit" class="btn">Odoslať</button>
-                        <a href="mailto:info@rogacionisti.sk">Napísať e‑mail</a>
-
-                        <p>---potřebuji adresu co tu mám napsat---</p>
-                </form>
-
-            </div>
-        </section>
     </main>
 
     <footer>
         <div class="content">
-            <p>&copy; <span id="year">2026</span> Rogacionisti.sk</p>
+            <div class="address">
+                <h4>Kontakt</h4>
+                <address>
+                    Ulica a číslo, PSČ Mesto<br>
+                    <a href="mailto:info@rogacionisti.sk">info@rogacionisti.sk</a>
+                </address>
+                <h4>Číslo účtu</h4>
+                <span>SK00 0000 0000 0000 0000 0000</span>
+            </div>
+
+            <p>
+                <span>&copy; <span id="year">2026</span> Rogacionisti.sk</span>
+                <span>Kongregácia rogacionistov Srdca Ježišovho</span>
+            </p>
+
+            <div class="social">
+                <h4>Sledujte nás</h4>
+                <div class="logos">
+                    <a href="https://www.facebook.com/profile.php?id=61586983414348" target="_blank" aria-label="Rogacionisti na Facebooku" title="Rogacionisti na Facebooku">
+                        <img src="/icons/facebook.svg" alt="Facebook logo" aria-hidden="true">
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
 </body>

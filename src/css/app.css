@@ -4,6 +4,7 @@
 @import "components/bible-grid.css";
 @import "components/timeline.css";
 @import "components/quote.css";
+@import "components/dialog.css";
 
 :root {
     /* COLORS */
@@ -71,10 +72,35 @@ main {
     align-items: center;
 }
 
-ol, ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+details {
+    & > div {
+        border-left: 1px solid var(--color-grey);
+        padding-left: 16px;
+        margin-left: 8px;
+        margin-top: 24px;
+    }
+
+    & summary {
+        font-weight: bold;
+        cursor: pointer;
+        position: relative;
+
+        --underline-color: var(--color-yellow);
+        text-decoration: underline solid var(--underline-color) 1px;
+        text-underline-offset: 8px;
+        text-decoration-color: transparent;
+
+        transition: bottom 200ms, text-underline-offset 300ms;
+        bottom: 0;
+
+        &:hover {
+            bottom: 2px;
+            text-underline-offset: 6px;
+            text-decoration-color: var(--underline-color);
+        }
+
+        &::marker { font-size: 1.2em }
+    }
 }
 
 button, .btn {
@@ -117,7 +143,7 @@ section:nth-of-type(even) {
     /* background-color: white; */
 }
 
-#historie {
+#historia {
 
 }
 
@@ -126,10 +152,46 @@ section:nth-of-type(even) {
 }
 
 footer {
-    background-color: rgb(240, 240, 240, 0.96);
+    background-color: rgb(255, 255, 255, 0.96);
+
+    /* background-color: rgb(240, 240, 240, 0.96); */
 
     & .content {
         padding: 16px;
-        justify-content: center;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        & > p {
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            text-align: center;
+        }
+
+        & h4 {
+            margin-bottom: 4px;
+
+            &:not(:first-child) { margin-top: 16px }
+        }
+
+        & .social {
+            text-align: right;
+
+            & p {
+                margin: 0;
+            }
+
+            & .logos {
+                display: flex;
+                justify-content: flex-end;
+                gap: 12px;
+
+                & img {
+                    display: block;
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
     }
 }

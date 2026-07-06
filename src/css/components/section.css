@@ -29,9 +29,17 @@ section {
     }
 }
 
-/* #onas {} */
+#ktosme {
+    & details p:last-child {
+        font-style: italic;
+        text-align: center;
+    }
+}
 
-#anibal {
+
+#zakladatel {
+    & h3 i { font-weight: normal; }
+
     & ol { margin: 0; }
 
     & .content {
@@ -46,43 +54,22 @@ section {
         }
     }
 
-    & details {
-        & > div {
-            border-left: 1px solid var(--color-grey);
-            padding-left: 16px;
-            margin-left: 8px;
-            margin-top: 24px;
-        }
+    & .recap {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
 
-        & summary {
-            font-weight: bold;
-            cursor: pointer;
-            position: relative;
+        & span {
+            padding: 4px 8px;
+            border-radius: 6px;
+            border: 1px solid var(--color-yellow);
 
-            text-decoration: underline solid var(--color-yellow) 1px;
-            text-underline-offset: 8px;
-            text-decoration-color: transparent;
-
-            transition: bottom 200ms, text-underline-offset 300ms;
-            bottom: 0;
-
-            &:hover {
-                bottom: 2px;
-                text-underline-offset: 6px;
-                text-decoration-color: var(--color-yellow);
-            }
-
-            &::marker { font-size: 1.2em }
-        }
-
-        & ol {
-            margin-left: 32px;
-            list-style: initial;
+            &:nth-child(2) { border-color: var(--color-red); }
         }
     }
 }
 
-#mise {
+#posobenie {
     & .content {
         flex-direction: column;
 
@@ -96,6 +83,12 @@ section {
                 flex-basis: 40%;
                 display: flex;
                 flex-direction: column;
+
+                align-self: flex-start;
+
+                list-style: none;
+                padding: 0;
+                margin: 0;
 
                 & li {
                     position: relative;
@@ -134,10 +127,10 @@ section {
 }
 
 #era {
-
+    & h2:not(:first-of-type) { margin-top: 0.83em; }
 }
 
-#historie {
+#historia {
     & .content {
         flex-direction: column;
     }
@@ -147,12 +140,5 @@ section {
     & .content {
         display: flex;
         flex-direction: column;
-
-        & form {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            align-items: flex-end;
-        }
     }
 }

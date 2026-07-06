@@ -1,0 +1,23 @@
+.zoomable { cursor: zoom-in; }
+
+body:has(#image-dialog) {
+    overflow: hidden;
+}
+
+#image-dialog {
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+
+    & img {
+        display: block;
+        max-width: min(var(--content-max-size), 90vw);
+        max-height: 90vh;
+        cursor: zoom-out;
+    }
+
+    &::backdrop {
+        background: rgb(0 0 0 / 0.8);
+    }
+}

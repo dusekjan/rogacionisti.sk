@@ -1,12 +1,14 @@
 ol.timeline {
-    --gap: 36px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
-    width: min(100%, 750px);
+    width: min(100%, 1100px);
     position: relative;
 
     display: grid;
-    gap: var(--gap);
-    grid-template-rows: repeat(9, 1fr);
+    gap: 28px;
+    grid-template-rows: repeat(7, auto);
 
     & time {
         padding: 3px 10px;
@@ -17,44 +19,52 @@ ol.timeline {
     }
 
     & p {
+        margin: 0;
         color: var(--color-grey-dark);
-        text-wrap: balance;
+        margin-top: 8px;
     }
 
     & li {
+        position: relative;  /* kotva pro .circle */
         display: grid;
         align-items: center;
-        width: 95%;
+        width: 100%;
         z-index: 2;
 
-        gap: 8px;
-        padding: 24px 16px;
+        gap: 6px;
+        padding: 16px;
 
-        border-width: 1px;
-        border-style: solid;
+        --half-border-width: 2px;
+
+        & .circle {
+            z-index: 3;
+            position: absolute;
+            transform: translateX(-50%);
+            top: -3px;
+        }
 
         &:nth-child(odd) {
             justify-items: start;
+            padding-right: 25%;
             background-image: linear-gradient(to left, transparent 5%, white 40%);
-            border-image: linear-gradient(to left, rgb(240, 240, 240, 0.96) 10%, white 50%, var(--color-yellow) 100%) 1;
-            border-left: 4px solid white;
-            padding-right: 40%;
+            border-left: calc(var(--half-border-width) * 2) solid var(--color-yellow);
+            & .circle { left: calc(50% - var(--half-border-width)) }
         }
 
         &:nth-child(even) {
             justify-self: end;
             justify-items: end;
             text-align: right;
+            padding-left: 25%;
             background-image: linear-gradient(to right, transparent 5%, white 40%);
-            border-image: linear-gradient(to right, rgb(240, 240, 240, 0.96) 10%, white 50%, var(--color-yellow) 100%) 1;
-            border-right: 4px solid white;
-            padding-left: 40%;
+            border-right: calc(var(--half-border-width) * 2) solid var(--color-yellow);
+            & .circle { left: calc(50% + var(--half-border-width)) }
         }
     }
 
-    & time, & h4, & p { margin: 0 }
+    & time, & h4 { margin: 0 }
 
-    & .timeline-hr {
+    & .timeline-vertical {
         z-index: 1;
         position: absolute;
         height: 100%;
@@ -64,24 +74,11 @@ ol.timeline {
         background-color: var(--color-red);
     }
 
-    & .circles-hr {
-        z-index: 3;
-        position: absolute;
-        height: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        gap: var(--gap);
-
-        & .circle-hr {
-            width: 8px;
-            height: 8px;
-            background-color: var(--color-yellow);
-            border-radius: 50%;
-            box-shadow: 0 0 2px 1px var(--color-yellow);
-        }
+    & .circle {
+        width: 6px;
+        height: 6px;
+        background-color: var(--color-yellow);
+        border-radius: 50%;
+        box-shadow: 0 0 2px 1px var(--color-yellow);
     }
 }

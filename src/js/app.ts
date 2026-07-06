@@ -1,8 +1,9 @@
-import { updateYear } from './utils.js';
+import { updateYear, initImageDialog } from './utils.js';
 
 
 function init() {
     updateYear();
+    initImageDialog();
 }
 
 init();
