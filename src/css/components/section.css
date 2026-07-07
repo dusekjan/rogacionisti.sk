@@ -120,6 +120,7 @@ section {
             & img {
                 display: block;
                 flex-basis: 60%;
+                min-width: 0;
                 width: 100%;
             }
         }
